@@ -1,5 +1,6 @@
 package com.mbmb.onlinebookstore.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Date;
 
@@ -22,11 +23,15 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Book {
+public class Book implements Serializable {
 	
 	
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private Long id;
@@ -34,7 +39,7 @@ public class Book {
 	private String name;
 	private String description;
 	@Column(name = "unit_price")
-	private BigDecimal unitePrice;
+	private BigDecimal unitPrice;
 	
 	@Column(name = "image_url")
 	private String imageUrl;

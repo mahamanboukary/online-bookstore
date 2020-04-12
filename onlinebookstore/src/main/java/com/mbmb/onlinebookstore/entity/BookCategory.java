@@ -1,5 +1,6 @@
 package com.mbmb.onlinebookstore.entity;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -20,10 +21,16 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class BookCategory {
+public class BookCategory implements Serializable {
 	
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private Long id;
